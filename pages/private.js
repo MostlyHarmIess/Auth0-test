@@ -1,10 +1,10 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Private() {
   return (
@@ -22,5 +22,7 @@ export default function Private() {
         </div>
       </main>
     </>
-  )
+  );
 }
+
+export const getServerSideProps = withPageAuthRequired();
