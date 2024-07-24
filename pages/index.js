@@ -42,6 +42,9 @@ export default function Home() {
           <p>Public API Response: {publicResponse}</p>
           <p>Private API Response: {privateResponse}</p>
           <p>RBAC API Response: {RBACResponse}</p>
+          <a href="/api/auth/login" className="button">
+            Login
+          </a>
         </section>
       </main>
     </>
